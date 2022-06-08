@@ -1,0 +1,130 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: linear-gradient(90deg, rgb(60, 62, 88),rgb(33, 33, 82));
+}
+
+#calculator{    
+    border-radius: 5px;
+    background-color: rgba(48, 131, 170, 0.7);
+    -webkit-box-shadow: 12px 50px 22px -14px rgba(0,0,0,0.5); 
+    box-shadow: 12px 50px 22px -14px rgba(0,0,0,0.5);
+    width: 450px;
+    height: 380px;
+    margin: 110px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-column-gap: 5px;
+    grid-row-gap: 9px;
+    padding: 20px 20px 5px 20px;
+    grid-template-areas: "t t t t t"
+                        "b b b . ."
+                        "nc nc nc . ."
+                        "nm nm nm . . "
+                        "nb nb nb . ."
+                        "nz nz nz . ."
+                        ". . . s s"
+}
+
+.screen {
+    height: 80px;
+    width: 455px;
+    color: black;
+    background: rgb(255, 255, 255);
+    border-radius: 5px;
+    grid-area: t;
+    position: relative;
+    overflow-wrap: break-word;
+    overflow-x: auto;
+    text-align: right;
+}
+
+.screen span{
+    font-size: 50px;
+    padding: 6px;
+}
+
+.buttons{
+    width: 400px;
+    height: 50px;    
+    grid-area: b;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 5px;
+}
+
+button {
+    font-size: 40px;
+    width: 130px;
+    color: white;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover{
+    background: black;
+}
+
+.numbers-up{
+    width: 400px;
+    height: 50px;
+    grid-area: nc;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 5px;
+}
+
+.numbers-middle{
+    width: 400px;
+    height: 50px;
+    grid-area: nm;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 5px;
+}
+
+.numbers-down{
+    width: 400px;
+    height: 50px;
+    grid-area: nb;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 5px;
+}
+
+.number-zero{
+    width: 400px;
+    height: 50px;
+    grid-area: nz;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 5px;
+}
+
+#zero{
+    width: 265px;
+}
+
+.signals{
+    width: 50px;
+    height: 286px;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    display: grid;
+    grid-row-gap: 9px;
+    grid-area: s;
+    grid-row: 2/7;
+}
+
+.sidebar{
+    font-size: 20px;
+    width: 52px;
+    height: 50px;
+}
+
+#result{
+    height: 109px;
+}
